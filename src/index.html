@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+
+    <title>Register</title>
+</head>
+
+<body>
+
+    <header class="header"></header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-bg d-flex justify-content-end">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample07">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Register</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="body-info">
+        <div class="row d-flex flex-row justify-content-center mt-5">
+            <div class="col-md-6 flex-row justify-content-center align-items-center align-self-center">
+                <div class="card card-header mb-3 card-register py-3">
+                    <div class="stepwizard">
+                        <div class="stepwizard-row setup-panel">
+                            <div class="stepwizard-step col-xs-3">
+                                <a href="#step-1" type="text" class="btn btn-success btn-circle">Account</a>
+                            </div>
+                            <div class="stepwizard-step col-xs-3">
+                                <a href="#step-2" type="text" class="btn btn-default btn-circle" disabled="disabled">Password</a>
+                            </div>
+                            <div class="stepwizard-step col-xs-3">
+                                <a href="#step-3" type="text" class="btn btn-default btn-circle" disabled="disabled">Application</a>
+                            </div>
+                            <div class="stepwizard-step col-xs-3">
+                                <a href="#step-4" type="text" class="btn btn-default btn-circle" disabled="disabled">Finalize</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card card-body">
+                    <form role="form" action="" method="POST">
+                        <input id="csrf_token" name="csrf_token" type="hidden" value="IjMwMzkwNWVmMTFmNGRmMzVjNDM1ZWMyMTVjZDRjNjU0Y2Q0ZmFhNGQi.Des4Dg.vEA8fkoGrcjnZDAW0G7ixlYAYOk">
+                        <div class="panel-primary setup-content" id="step-1">
+                            <div class="card-header text-center mb-4">
+                                <h4 class="">Account Details</h4>
+                            </div>
+
+                            <div class="panel-body">
+                                <div class="form-group text-center mb-4">
+                                    <label class="control-label input-lg" for="Username" for="Username">Username</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend2"><i class="far fa-user"></i></span>
+                                        </div>
+                                        <input class="form-control" autocomplete="off" class="form-control-register" id="Username" name="Username" placeholder="Username" required="required" type="text" value="">
+                                    </div>
+                                </div>
+
+                                <div class="form-group text-center mb-4">
+                                    <label class="control-label input-lg" for="Email">Email</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend2"><i class="far fa-envelope"></i></span>
+                                        </div>
+                                        <input class="form-control" autocomplete="off" id="Email" name="Email" placeholder="Email Address" required="required" type="email" value="">
+                                    </div>
+
+                                </div>
+
+                                <button class="btn nextBtn btn-next float-right" style="color:white; font-weight: bold" type="button">Next</button>
+                            </div>
+                        </div>
+
+                        <div class="panel-primary setup-content" id="step-2">
+                            <div class="card-header text-center mb-4">
+                                <h4 class="">Create Password</h4>
+                            </div>
+
+                            <div class="panel-body">
+                                <div class="form-group text-center mb-4">
+                                    <label class="control-label input-lg" for="password">Password</label>
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend2"><i class="fas fa-lock"></i></span>
+                                        </div>
+                                        <input class="form-control" id="password" name="password" placeholder="Password" required="required" type="password" value="">
+                                    </div>
+                                </div>
+
+                                <div class="form-group text-center mb-4">
+                                    <label class="control-label input-lg" for="confirm">Confirm Password</label>
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend2"><i class="fas fa-lock"></i></span>
+                                        </div>
+                                        <input class="form-control" id="confirm" name="confirm" placeholder="Confirm Password" required="required" type="password" value="">
+                                    </div>
+                                </div>
+
+                                <button class="btn nextBtn btn-next float-right" style="color:white; font-weight: bold" type="button">Next</button>
+                            </div>
+                        </div>
+
+                        <div class="panel-primary setup-content" id="step-3">
+                            <div class="card-header text-center mb-4">
+                                <h4 class="">Roleplay Application</h4>
+                            </div>
+
+                            <div class="panel-body">
+                                <div class="form-group mb-4">
+                                    <label class="control-label input-lg" for="ooc_and_ic">What is the difference between out of character (OOC) and in character (IC)?</label>
+                                    <textarea class="form-control" cols="125" id="ooc_and_ic" name="ooc_and_ic" required="required" rows="5"></textarea>
+                                </div>
+
+                                <div class="form-group mb-4">
+                                    <label class="control-label input-lg" for="define_rp_terms">Explain the following concepts in your own words: Deathmatching, Powergaming, and Metagaming</label>
+                                    <textarea class="form-control" cols="125" id="define_rp_terms" name="define_rp_terms" required="required" rows="5"></textarea>
+                                </div>
+
+                                <label class="control-label input-lg pb-2" for="accept_terms">The server is currently in beta testing - meaning there are likely to be problems, faults, bugs and/or areas that are incomplete or unpolished. Please confirm that you understand this.</label>
+
+                                <input id="beta_participation-0" name="beta_participation" type="radio" value="affirm"> <label for="beta_participation-0">I understand</label>
+
+                                <br>
+                                <input id="beta_participation-1" name="beta_participation" type="radio" value="reject"> <label for="beta_participation-1">I do not understand</label>
+                                <br>
+
+                                <button class="btn nextBtn btn-next float-right" style="color:white; font-weight: bold" type="button">Next</button>
+                            </div>
+                        </div>
+
+                        <div class="panel-primary setup-content" id="step-4">
+                            <div class="card-header text-center mb-4">
+                                <h4 class="">Finalize</h4>
+                            </div>
+
+                            <div class="panel-body">
+                                <div class="tos-scroll" style="height: 200px; overflow: scroll">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec elit eu mauris ultrices pretium. Integer tempor nisi quis pretium egestas. Quisque euismod eros in convallis ultrices. Curabitur ut egestas ligula. Pellentesque rhoncus laoreet orci, in convallis neque congue at. Cras eu velit ante. <br><br> Suspendisse orci quam, pulvinar ac mattis luctus, posuere ut dolor. Mauris tincidunt at nunc sed egestas. Duis magna elit, condimentum vel sodales quis, ornare et nibh. Sed et eleifend augue, ornare posuere erat. Proin lobortis ornare quam vel bibendum. Morbi imperdiet iaculis arcu at pharetra. Quisque et pharetra lacus, id euismod tortor. <br><br> Mauris eu leo ut mi tempus commodo sit amet eget enim. Donec quis justo egestas, dictum lorem eget, vestibulum risus. Quisque varius maximus aliquam. Nullam turpis velit, sagittis nec ex in, ultrices ultrices magna. Etiam tristique, nisi a dictum dictum, velit felis feugiat nisi, eu fringilla justo justo nec sem. Nunc maximus magna urna, sit amet mattis orci pulvinar sit amet. Nulla mattis at ex vel ultrices. Duis pretium risus ut lorem blandit, ullamcorper auctor libero porta.
+                                    </p>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <label class="control-label input-lg" style="font-weight: bold" for="accept_tos">I accept the TOS</label>
+
+                                    <div class="form-group form-check mt-4">
+                                        <input type="checkbox" class="form-check-input form-control-register" id="accept_tos" name="accept_tos" type="checkbox" value="y">
+                                        <label class="form-check-label" for="exampleCheck1">I agree</label>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-next float-right my-2" style="color:white; font-weight: bold" type="submit">Finish!</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
